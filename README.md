@@ -14,6 +14,13 @@
 
 > 打草稿列出思维和步骤，根据思维和步骤完成README.md的笔记记录。
 
+技术栈
+
+- Mybatis
+- Lombok
+- Mysql
+- Maven
+
 ## 1.创建数据库
 
 > 使用可视化数据库管理工具navicat
@@ -1567,3 +1574,80 @@ mybaits.xml
 ```
 
 STEP14里面的Main就不对应更改了，保持STEP15的独立性。
+
+## 16.GIT操作
+
+> 给项目打标签发行V1.0
+
+查看所有tag
+
+```bash
+git tag
+```
+
+打上tag
+
+```bash
+git tag v1.0
+# 直接打上标签v1.0
+
+git tag -a v1.0 -m "-a表示需要打上注释信息，然后-m就接着注释信息即可"
+
+git tag -a v1.0
+# vim编辑器打上tag，不接上-m会自动进入vim编辑器
+```
+
+补打tag标签
+
+```bash
+git tag -a v3.0 ff28fd51 -m "给之前的提交记录打tag" 
+# 找到commit的hash值即可
+```
+
+```bash
+git log
+# 查看所有commit信息
+
+git log --oneline
+# 顾名思义
+```
+
+查看tag详细信息
+
+```bash
+git show v1.0
+```
+
+将tag同步到远程仓库
+
+```bash
+git push origin v3.0
+# 将本地名为 v3.0 的标签推送至远程仓库
+
+git push origin --tags
+# 将本地所有标签一次性推送至远程仓库，也就是正常的push操作后面添加点参数就行了
+```
+
+切换tag
+
+```bash
+git checkout v3.0
+git checkout -b [newbranchname] [tagname]
+```
+
+删除本地tag
+
+```bash
+git tag -d v1.0
+```
+
+删除远程tag
+
+```bash
+git push origin :refs/tags/v2.0
+git push origin --delete v1.0
+```
+
+> 开发工具中command + option + ⬇️键能向下再开一个光标
+
+> CSDN真是依托，不多评价。
