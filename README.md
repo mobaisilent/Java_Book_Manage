@@ -1622,7 +1622,7 @@ git show v1.0
 
 ```bash
 git push origin v3.0
-# 将本地名为 v3.0 的标签推送至远程仓库
+# 将本地名为 v3.0 的标签推送至远程仓库,有那种特意推送tag的意识就行了
 
 git push origin --tags
 # 将本地所有标签一次性推送至远程仓库，也就是正常的push操作后面添加点参数就行了
@@ -1647,6 +1647,10 @@ git tag -d v1.0
 git push origin :refs/tags/v2.0
 git push origin --delete v1.0
 ```
+
+github发行release的话只需要选择对应的tag进行发行即可
+
+<img src="images/image-20241008221751115.png" alt="image-20241008221751115" style="zoom:50%;" />
 
 > 开发工具中command + option + ⬇️键能向下再开一个光标
 
