@@ -1,12 +1,20 @@
 package org.manage.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Student {
-  final int sid;
-  final String name;
-  final String sex;
-  final int grade;
+  int sid;
+
+  public Student(String name, String sex, int grade) {
+    this.name = name;
+    this.sex = sex;
+    this.grade = grade;
+  }
+
+  String name;
+  String sex;
+  int grade;
 }
-// LomBok的初次使用记得将idea的注解开启

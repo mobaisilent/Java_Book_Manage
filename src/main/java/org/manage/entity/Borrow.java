@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Borrow {
   int id;
-  final int sid;
-  final int bid;
+  Student student;
+  Book book;
 }
